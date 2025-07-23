@@ -20,6 +20,20 @@
 		</form>
 
 		<script type="text/javascript" src="./script.js">
+			window.onload = function () {
+    const select = document.getElementById('colorSelect');
+    const button = document.querySelector('input[type="button"]');
+
+    button.addEventListener('click', function () {
+        // Get the selected index
+        const selectedIndex = select.selectedIndex;
+
+        // Check if any item is selected
+        if (selectedIndex !== -1) {
+            select.remove(selectedIndex);
+        }
+    });
+};
 		</script>
 
 	</body>
